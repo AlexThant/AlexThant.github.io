@@ -18,6 +18,7 @@
     <a href="#bio">Bio</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
+    <a href="#results">CFD Results</a>
     <a href="#hobbies">Hobbies</a>
     <a href="#contact">Contact</a>
   </div>
@@ -134,6 +135,42 @@
     </div>
   </section>
 
+  <section class="section" id="results">
+    <p class="section__eyebrow">CFD Results</p>
+    <p class="section__intro">Flow visualisations from the cumulant lattice Boltzmann solver.</p>
+
+    <div class="carousel">
+      <div class="carousel__track">
+        <figure class="carousel__slide">
+          <img src="multi_grids_Re3900_zoomed.svg" alt="Multi-grid Re=3900 zoomed view">
+          <figcaption>Cumulant LBM — multi-grid Re=3900, zoomed near-wake</figcaption>
+        </figure>
+        <figure class="carousel__slide">
+          <img src="multi_grids_Re3900.svg" alt="Multi-grid Re=3900 full view">
+          <figcaption>Cumulant LBM — multi-grid Re=3900, full domain</figcaption>
+        </figure>
+        <figure class="carousel__slide">
+          <img src="multi_grids_Y_section_Re3900.svg" alt="Y-section Re=3900">
+          <figcaption>Cumulant LBM — Y-section slice at Re=3900</figcaption>
+        </figure>
+        <figure class="carousel__slide">
+          <img src="ParaView_Re=200_laminar.svg" alt="Laminar flow Re=200">
+          <figcaption>ParaView — laminar cylinder flow at Re=200</figcaption>
+        </figure>
+      </div>
+
+      <button class="carousel__btn carousel__btn--prev" aria-label="Previous">&#8592;</button>
+      <button class="carousel__btn carousel__btn--next" aria-label="Next">&#8594;</button>
+
+      <div class="carousel__dots">
+        <button class="carousel__dot carousel__dot--active" aria-label="Slide 1"></button>
+        <button class="carousel__dot" aria-label="Slide 2"></button>
+        <button class="carousel__dot" aria-label="Slide 3"></button>
+        <button class="carousel__dot" aria-label="Slide 4"></button>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="hobbies">
     <p class="section__eyebrow">Hobbies</p>
     <div class="section__body">
@@ -164,5 +201,21 @@
   <p>&copy; 2026 Thant Zin Htun. All rights reserved.</p>
 </footer>
 
+<script>
+  const track = document.querySelector('.carousel__track');
+  const dots = document.querySelectorAll('.carousel__dot');
+  let current = 0;
+  const total = document.querySelectorAll('.carousel__slide').length;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('carousel__dot--active', i === current));
+  }
+
+  document.querySelector('.carousel__btn--prev').addEventListener('click', () => goTo(current - 1));
+  document.querySelector('.carousel__btn--next').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+</script>
 </body>
 </html>
