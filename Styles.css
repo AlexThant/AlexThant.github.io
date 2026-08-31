@@ -185,6 +185,37 @@ button:focus-visible {
   text-decoration: none;
 }
 
+/* ---------- Hero Quote ---------- */
+
+.hero__quote {
+  position: absolute;
+  bottom: clamp(40px, 6vw, 64px);
+  right: clamp(20px, 5vw, 64px);
+  z-index: 1;
+  text-align: right;
+  max-width: 50ch;
+}
+
+.hero__quote blockquote {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+}
+
+.hero__quote cite {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  color: var(--accent-warm);
+  letter-spacing: 0.04em;
+}
+
 /* ---------- Sections ---------- */
 
 .section {
