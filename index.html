@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="Styles.css">
 </head>
 <body>
 
@@ -18,23 +18,18 @@
     <a href="#bio">Bio</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
+    <a href="#hobbies">Hobbies</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <svg class="hero__streamlines" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <path class="stream stream--1" d="M -100 380 C 150 320, 300 420, 500 340 S 850 260, 1300 320" />
-    <path class="stream stream--2" d="M -100 260 C 200 220, 350 300, 600 230 S 900 160, 1300 210" />
-    <path class="stream stream--3" d="M -100 140 C 180 180, 400 90, 650 140 S 950 200, 1300 120" />
-  </svg>
+  <img class="hero__wallpaper" src="page_wallpaper.jpeg" alt="" aria-hidden="true">
   <div class="hero__inner">
     <p class="eyebrow">Computational Dynamics &nbsp;·&nbsp; Underwater Vehicles &nbsp;·&nbsp; Numerical Simulation</p>
     <h1 class="hero__name">Thant Zin Htun, Ph.D.(Eng)</h1>
     <p class="hero__statement">
-      I develop high-fidelity solvers for fluid–structure interaction in offshore and subsea
-      systems — lattice Boltzmann methods for vehicle hydrodynamics, and absolute nodal
-      coordinate formulations for mooring and cable dynamics.
+      There is something deeply satisfying about understanding how multible interconnected bodies behave in fluid environments. That curiosity drives my research across offshore, subsea, and aerospace systems.
     </p>
     <div class="hero__links">
       <a href="https://github.com/AlexThant" target="_blank" rel="noopener">GitHub</a>
@@ -51,47 +46,50 @@
     <p class="section__eyebrow">Bio</p>
     <div class="section__body">
       <p>
-        I'm a researcher and engineer working at the intersection of multibody dynamics and computational fluid dynamics,
-        and numerical methods, with a focus on ocean engineering —
-        ROVs, mooring systems, and floating offshore wind. My work spans in-house GPU-accelerated
-        solver development, validation against experimental and DNS benchmarks, and peer review for
-        journals in ocean and mechanical engineering.
+        I'm an assistant professor at The University of Osaka. My research lies at the intersection of multibody dynamics and computational fluid dynamics and numerical methods, with a focus on ocean engineering — ROVs, mooring systems, and offshore renewables. My work spans numerical modeling and dynamic analysis of coupled rigid-flexible multibody systems, high-performance computing and efficient numerical algorithms, and peer review for journals in ocean and mechanical engineering. I am also expanding into aerospace — bio-inspired flexible morphing wings, tethered airborne wind energy systems, and E-sails in space.
       </p>
       <p>
-        Currently based at <span class="placeholder">[ Institution / Lab ]</span>, previously
-        <span class="placeholder">[ Previous affiliation ]</span>.
+        Currently based at <a href="https://www.eng.osaka-u.ac.jp/department/en/1538/" target="_blank" rel="noopener">Marine Hydro-Science and Engineering Lab</a>.
       </p>
     </div>
   </section>
 
   <section class="section" id="publications">
-    <p class="section__eyebrow">Publications</p>
+    <p class="section__eyebrow">Latest Publications</p>
 
     <ul class="pub-list">
       <li class="pub">
-        <p class="pub__title">A cumulant lattice Boltzmann framework for maneuvering ROV hydrodynamics in a non-inertial reference frame</p>
-        <p class="pub__meta">Your Name, Coauthor Name &nbsp;·&nbsp; <em>Journal / Conference, Year</em> &nbsp;·&nbsp; Status: in preparation</p>
+        <p class="pub__title">An efficient ANCF framework for large-scale simulation of offshore flexible slender structures: CPU–GPU heterogeneous computing</p>
+        <p class="pub__meta">T.Z. Htun, D. Garcia-Vallejo and H. Suzuki &nbsp;·&nbsp; <em> Ocean Engineering, 2026</em> &nbsp;·&nbsp; Status: published</p>
         <div class="pub__links">
-          <a href="#">PDF</a>
-          <a href="#">DOI</a>
-          <a href="#">Code</a>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0029801826028404">PDF</a>
+          <a href="https://doi.org/10.1016/j.oceaneng.2026.127006">DOI</a>
+          <!-- <a href="#">Code</a> -->
         </div>
       </li>
 
       <li class="pub">
-        <p class="pub__title">Displacement-controlled homotopy continuation for static initialization of ANCF cable models</p>
-        <p class="pub__meta">Your Name, Coauthor Name &nbsp;·&nbsp; <em>Ocean Engineering, Year</em></p>
+        <p class="pub__title">Genetic Algorithm optimization of lazy wave dynamic cables via multibody formalism and element-level parallelism on GPU</p>
+        <p class="pub__meta">T.Z. Htun &nbsp;·&nbsp; <em> The 45th International Conference on Offshore Mechanics and Arctic Engineering (OMAE2026), 2026</em></p>
         <div class="pub__links">
-          <a href="#">PDF</a>
-          <a href="#">DOI</a>
+          <!-- <a href="#">PDF</a> -->
+          <!-- <a href="#">DOI</a> -->
         </div>
       </li>
 
       <li class="pub">
-        <p class="pub__title">Validation of a GPU AMR cumulant LBM solver against DNS and experimental cylinder benchmarks</p>
-        <p class="pub__meta">Your Name &nbsp;·&nbsp; <em>Conference Proceedings, Year</em></p>
+        <p class="pub__title">Understanding the Magnus effect and fluid-structure interaction of a rotating pipe in subcritical flow</p>
+        <p class="pub__meta">N. Chinoros, T.Z. Htun and H. Suzuki &nbsp;·&nbsp; <em>The 45th International Conference on Offshore Mechanics and Arctic Engineering (OMAE2026), 2026</em></p>
         <div class="pub__links">
-          <a href="#">PDF</a>
+          <!-- <a href="#">PDF</a> -->
+        </div>
+      </li>
+
+      <li class="pub">
+        <p class="pub__title">On rotating drill pipe dynamics induced by stick–slip behavior</p>
+        <p class="pub__meta">T. Htun, T.Z. Htun and H. Suzuki &nbsp;·&nbsp; <em>The 45th International Conference on Offshore Mechanics and Arctic Engineering (OMAE2026), 2026</em></p>
+        <div class="pub__links">
+          <!-- <a href="#">PDF</a> -->
         </div>
       </li>
     </ul>
@@ -102,12 +100,10 @@
 
     <div class="project-grid">
       <article class="project">
-        <p class="project__tag">D3Q27 · CUDA · AMR</p>
+        <p class="project__tag">D3Q27 · CLBM · CUDA · AMR</p>
         <h3 class="project__title">Cumulant LBM ROV Solver</h3>
         <p class="project__desc">
-          GPU-accelerated cumulant lattice Boltzmann solver with adaptive mesh refinement and
-          interpolated bounce-back boundaries, built for maneuvering simulations of underwater vehicles
-          in a translating-and-rotating body-fixed reference frame.
+          GPU-accelerated cumulant lattice Boltzmann solver with adaptive mesh refinement and interpolated bounce-back boundaries, built for simulation of turbulent channel flows with high Reynolds numbers.
         </p>
         <div class="project__links">
           <a href="https://github.com/yourusername/repo-name" target="_blank" rel="noopener">Repository</a>
@@ -115,11 +111,10 @@
       </article>
 
       <article class="project">
-        <p class="project__tag">ANCF · Contact Mechanics</p>
+        <p class="project__tag">ANCF · Natural coordinates· Contact Mechanics</p>
         <h3 class="project__title">ANCF Cable–Vehicle Coupling</h3>
         <p class="project__desc">
-          Coupled tether–vehicle solver using the absolute nodal coordinate formulation, with
-          ellipsoid closest-point contact projection and a consistent tangent for hydrodynamic drag.
+          Coupled dynamics of ROV, its tether and a surface ship in application to offshore wind farm inspection and maintenance.
         </p>
         <div class="project__links">
           <a href="https://github.com/yourusername/repo-name" target="_blank" rel="noopener">Repository</a>
@@ -127,11 +122,10 @@
       </article>
 
       <article class="project">
-        <p class="project__tag">Teaching</p>
+        <p class="project__tag">Supervising</p>
         <h3 class="project__title">CFD Lecture Notes (EN/JP)</h3>
         <p class="project__desc">
-          Bilingual lecture material comparing lattice Boltzmann and finite volume methods, and
-          covering the numerical advantages of the cumulant collision operator.
+          Supervising international students at our lab on their research projects and guiding them through the fundamentals of computational fluid dynamics and multibody dynamics in English, Japanese and Burmese. 
         </p>
         <div class="project__links">
           <a href="#">Slides</a>
@@ -140,11 +134,20 @@
     </div>
   </section>
 
+  <section class="section" id="hobbies">
+    <p class="section__eyebrow">Hobbies</p>
+    <div class="section__body">
+      <p>
+        I go hiking frequently. I've climbed Mt. Fuji in 2018 and I've hiked quite a few trails through mountains located in the Shiga region.
+      </p>
+    </div>
+  </section>
+
   <section class="section" id="contact">
     <p class="section__eyebrow">Contact</p>
     <div class="section__body">
       <p>
-        Reach me at <a href="mailto:tzhtun@naoe.eng.osaka-u.ac.jp">tzhtun@naoe.eng.osaka-u.ac.jp</a><div class=""></div>
+        Reach me at <a href="mailto:tzhtun@naoe.eng.osaka-u.ac.jp">tzhtun@naoe.eng.osaka-u.ac.jp</a>
       </p>
       <div class="hero__links">
         <a href="https://github.com/AlexThant" target="_blank" rel="noopener">GitHub</a>
