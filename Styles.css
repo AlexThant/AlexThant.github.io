@@ -11,7 +11,8 @@
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
-  --max-width: 780px;
+  --max-width: 1200px;
+  --max-width-wide: 70vw;
 }
 
 * {
@@ -157,7 +158,7 @@ button:focus-visible {
 }
 
 .hero__statement {
-  max-width: 56ch;
+  max-width: 75ch;
   color: rgba(230, 233, 236, 0.85);
   font-size: 1rem;
   line-height: 1.7;
@@ -225,6 +226,12 @@ button:focus-visible {
   border-bottom: 1px solid var(--rule);
 }
 
+#bio.section {
+  max-width: var(--max-width-wide);
+  text-align: left;
+  margin: 0 0 0 clamp(20px, 5vw, 64px);
+}
+
 .section__eyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -236,7 +243,10 @@ button:focus-visible {
 
 .section__body p {
   color: var(--text-dim);
-  max-width: 62ch;
+}
+
+#bio .section__body p {
+  max-width: 100%;
 }
 
 .section__body p a {
